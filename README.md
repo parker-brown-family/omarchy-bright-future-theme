@@ -9,9 +9,9 @@ so the terminals read as lit panes above the scene.
 
 ![Bright Future, applied](screenshots/terminals.png)
 
-The capture is real and reproducible: `bin/shoot-terminals` stages fastfetch,
-the omarchy palette preview and btop on a spare workspace, shoots the monitor,
-and derives `preview.png` from the same frame.
+The capture is real and reproducible: [`bin/shoot-terminals`](https://github.com/parker-brown-family/omarchy-bright-future-tools/blob/main/bin/shoot-terminals)
+stages fastfetch, the omarchy palette preview and btop on a spare workspace,
+shoots the monitor, and derives `preview.png` from the same frame.
 
 ## Install
 
@@ -50,10 +50,10 @@ together with how to derive a sibling palette.
 
 Five 4K wallpapers — different scenes, one colour physics. The accents behave
 like light something in the world is producing, never like paint. The Omarchy
-wordmark is drawn by [`backgrounds/src/render.sh`](backgrounds/src/render.sh)
+wordmark is drawn by [`wallpapers/render.sh`](https://github.com/parker-brown-family/omarchy-bright-future-tools/blob/main/wallpapers/render.sh)
 (bash emits SVG and librsvg rasterises it). Four source renders are brought
 onto the palette — one re-lit from grayscale, three conformed by
-[`backgrounds/src/conform-sourced.sh`](backgrounds/src/conform-sourced.sh)
+[`wallpapers/conform-sourced.sh`](https://github.com/parker-brown-family/omarchy-bright-future-tools/blob/main/wallpapers/conform-sourced.sh)
 (fill-crop, chroma trim, floor crushed to the void). All four were generated
 for this theme with GPT and processed locally; their retained source renders
 live in [`backgrounds/src/`](backgrounds/src/).
@@ -62,7 +62,7 @@ live in [`backgrounds/src/`](backgrounds/src/).
   ([generation conversation](https://chatgpt.com/share/6a9e7cfa-38b4-83e8-91dc-2bb4e7c9d8b3),
   [`backgrounds/src/night-shift-src.png`](backgrounds/src/night-shift-src.png)),
   flattened to grayscale and regraded through a palette ramp by
-  [`backgrounds/src/grade-night-shift.sh`](backgrounds/src/grade-night-shift.sh):
+  [`wallpapers/grade-night-shift.sh`](https://github.com/parker-brown-family/omarchy-bright-future-tools/blob/main/wallpapers/grade-night-shift.sh):
   indigo mass, cyan reticle, magenta doorway.
 - **Low orbit** — the planet at night: a blue city-light network far below,
   magenta aurora walking the limb, one eclipsed sun. The rotation's loudest
@@ -74,12 +74,19 @@ live in [`backgrounds/src/`](backgrounds/src/).
 - **Omarchy** — virtually black; the wordmark catches magenta light from the
   lower left and cyan from the upper right.
 
-Rendered PNGs are committed — rerun the scripts only to change the art (needs
-librsvg and ImageMagick).
+The rendered wallpapers are committed — rerun the scripts only to change the
+art (needs librsvg and ImageMagick).
 
 ![Night shift](backgrounds/4-night-shift.png)
 
 ![Omarchy](backgrounds/omarchy.png)
+
+## Tools
+
+The scripts that render the wallpapers and shoot the preview live in their own
+repository, [omarchy-bright-future-tools](https://github.com/parker-brown-family/omarchy-bright-future-tools), because a theme
+carries no code. Clone it beside this one and the scripts find this checkout
+themselves.
 
 ## License
 

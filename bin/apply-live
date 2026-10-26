@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# Re-stage this working copy as the live omarchy theme, so edits to
-# colors.toml are what the desktop (and bin/shoot-terminals) actually shows.
-set -euo pipefail
-exec omarchy-theme-set bright-future
